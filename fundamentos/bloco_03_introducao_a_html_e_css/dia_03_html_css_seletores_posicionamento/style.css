@@ -1,0 +1,52 @@
+.caixa {
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: top;
+  
+  }
+  
+  .width-and-height {
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
+  .padding {
+padding: 20px;
+  }
+
+  .margin {
+margin: 30px;
+  }
+
+  .border { 
+      border: 5px solid black;
+  }
+  
+  
+
+  .super-mario {
+    width: 200px;
+   
+  }
+  
+  .goomba {
+    width: 100px;
+   
+  }
+  
+  .baloon {
+  
+  }
+  
+  .speach {
+    font-size: 25px;
+ 
+}
+  
+  .bowser {
+    width: 200px;
+  }
+  
