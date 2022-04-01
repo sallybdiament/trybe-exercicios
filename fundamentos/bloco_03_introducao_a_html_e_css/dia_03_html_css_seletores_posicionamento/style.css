@@ -1,62 +1,62 @@
 .caixa {
-    color: white;
-    display: inline-block;
-    line-height: 50px;
-    text-align: center;
-    vertical-align: top;
-  
-  }
-  
-  .width-and-height {
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
-  .padding {
-padding: 20px;
-  }
+  color: white;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: top;
+}
 
-  .margin {
-margin: 30px;
-  }
+.width-and-height {
+  height: 50px;
+  width: 50px;
+}
 
-  .border { 
-      border: 5px solid black;
-  }
-  
+/* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
+.padding {
+  padding: 20px;
+}
 
+.margin {
+  margin: 30px;
+}
 
-  .super-mario {
-    width: 200px;
-   
-  }
-  
-  .goomba {
-    width: 100px;
-    position: absolute;
-    right: 400px;   
-    top: 500px;
-  }
-  
-  .baloon {
+.border {
+  border: 5px solid black;
+}
+
+.super-mario {
+  width: 200px;
   position: absolute;
-top: 700px;  
-right: 200px;
-z-index: 2;
+  top: 300px;
 }
-  
-  .speach {
-    font-size: 25px;
- position: absolute;
- top: 750px;
- z-index: 1;
+
+.goomba {
+  width: 100px;
+  position: absolute;
+  right: 400px;
+  top: 600px;
 }
-  
-  .bowser {
-    width: 200px;
-    position: absolute;
-    right: 10px;
-    top: 820px
-  }
-  
+
+.baloon {
+  position: absolute;
+  top: 300px;
+  right: 20px;
+  z-index: 1;
+}
+
+.speach {
+  font-size: 25px;
+  position: absolute;
+  top: 350px;
+  left: 280px;
+  z-index: 2;
+}
+
+.bowser {
+  width: 200px;
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  width: 500px;
+
+}
