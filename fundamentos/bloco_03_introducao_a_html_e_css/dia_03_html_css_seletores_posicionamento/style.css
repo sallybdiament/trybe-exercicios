@@ -33,15 +33,17 @@
 .goomba {
   width: 100px;
   position: absolute;
-  right: 400px;
-  top: 600px;
+  /* right: 400px; */
+  top: 560px;
+  padding: 0 100px;
 }
 
 .baloon {
   position: absolute;
   top: 300px;
-  right: 20px;
+  /* right: 20px; */
   z-index: 1;
+  padding: 0 250px;
 }
 
 .speach {
@@ -55,8 +57,12 @@
 .bowser {
   width: 200px;
   position: absolute;
-  left: 500px;
   top: 300px;
+  left: 500px;
   width: 500px;
+}
 
+.agrupamento_seletores {
+  margin-top: 500px;
+  
 }
