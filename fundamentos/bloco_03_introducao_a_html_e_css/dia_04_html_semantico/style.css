@@ -1,3 +1,44 @@
-body {
-    font-family: sans-serif;
-}
+h1 {
+    text-align: center;
+  }
+
+  .first {
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    padding-bottom: 30px;
+    background-color:  rgb(235, 200, 84);
+    display: block;
+    margin-left: 200px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    padding-bottom: 30px
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    padding-bottom: 30px
+  }
+
+  .centralizada {
+      text-align: center;
+  }
+
+  ul li {
+      display: inline;
+  }
+
+  .podio2 {
+      display: inline-block;
+  }
