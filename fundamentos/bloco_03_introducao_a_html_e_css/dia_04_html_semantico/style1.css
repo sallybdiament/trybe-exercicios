@@ -1,0 +1,15 @@
+footer {
+    text-align: center;
+}
+
+img {
+width: 200px;
+}
+
+.muda-block, img {
+    display: inline;
+}
+
+.tamanho-texto {
+width: 200px;
+}
