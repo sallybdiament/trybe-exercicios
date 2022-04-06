@@ -33,3 +33,36 @@ else {
     console.log("Reprovado");
 }
 
+const currentHour = 11;
+let message;
+if (currentHour>=22){
+    message="hora de dormir";
+    console.log(message);
+}
+else if (currentHour>=18 && currentHour<22) {
+    message="vamos jantar";
+    console.log(message);
+}
+else if (currentHour >=14 && currentHour<18){
+    message = "bolo da tarde";
+    console.log(message);
+}
+else if (currentHour >=11 && currentHour<14){
+    message = "almoço";
+    console.log(message);
+}
+else if (currentHour >=4 && currentHour<11){
+    message = "cheiro de café";
+    console.log(message);
+}
+
+let weekDay = "domingo";
+if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira"){
+    console.log("Mais um dia de aprendizado");
+}
+else {
+    console.log("dia de descanso");
+}
+
+console.log((2+2)===4);
+console.log(!(2+2)===4);
