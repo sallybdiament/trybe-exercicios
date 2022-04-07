@@ -38,3 +38,18 @@ for (let index1=0; index1<groceryList.length; index1 +=1){
     console.log(groceryList[index1]);
 }
 
+//para fixar do for/of /
+let numeros = [1, 2, 3, 4, 5]
+for (let numero of numeros){
+    numero += 1;
+    console.log(numero);
+}
+ let word = 'Hello';
+ for (let letter of word){
+     console.log(letter);
+ }
+
+ let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+ for (let mostraNames of names) {
+ console.log(mostraNames);
+}
