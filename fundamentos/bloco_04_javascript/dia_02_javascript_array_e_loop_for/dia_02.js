@@ -87,3 +87,59 @@ for (index2=0; index2<numbers.length; index2 +=1){
 console.log('O maior valor é: '+ maiorValor);
 
 //Exercício 6./
+let numeroDeImpares = 0;
+for (index2=0; index2<numbers.length; index2 +=1){
+    if ((numbers[index2]%2)!==0){
+        numeroDeImpares+=1;
+    }
+}
+if (numeroDeImpares ===0 ){
+    console.log('nenhum valor é ímpar');
+}
+console.log('O número de ímpares é: '+ numeroDeImpares);
+
+//Exercício 7./
+let menorValor = numbers[0];
+for (index2=1; index2<numbers.length; index2 +=1){
+    if (menorValor>numbers[index2]){
+        menorValor = numbers[index2] ;
+    }
+}
+console.log('O menor valor é:'+ menorValor);
+
+//Exercício 8./
+let novoArray = [];
+for (let index4=0; index4<=25; index4 +=1){
+    novoArray.push(index4);
+}
+console.log('Mostrando o novo Array: '+ novoArray);
+
+// Exercício 9./
+for (let index5=0; index5<novoArray.length; index5 +=1){
+    console.log('Resultado da divisão: '+ novoArray[index5]/2);
+}
+
+// Exercício Bônus 1./
+let array = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+for (let index = 1; index < array.length; index += 1) {
+    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+      if (array[index] < array[secondIndex]) {
+        let position = array[index];
+        array[index] = array[secondIndex];
+        array[secondIndex] = position;
+      }
+    }
+  }
+  console.log(array);
+
+  // Exercício Bônus 2./
+  for (let index = 1; index < array.length; index += 1) {
+    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+      if (array[index] > array[secondIndex]) {
+        let position = array[index];
+        array[index] = array[secondIndex];
+        array[secondIndex] = position;
+      }
+    }
+  }
+  console.log(array);
