@@ -120,3 +120,60 @@ const num6 = 5;
 if (num4/2===0 && num5/2===0 && num6/2===0){
     console.log('false');}
     else {console.log('true');}
+
+//Exercicio 10./
+const custoProduto = 100;
+const valorDeVenda = 150;
+const unidadesVendidas = 1000;
+let custoComImposto = custoProduto*1.20;
+let lucroUnitario = valorDeVenda - custoComImposto;
+let lucroTotal = unidadesVendidas*lucroUnitario;
+
+if (custoProduto <0 || valorDeVenda<0 || unidadesVendidas<0){
+    console.log('erro');
+} else {
+console.log('Lucro Unitário: '+ lucroUnitario);
+console.log('Lucro Total: '+ lucroTotal);
+}
+
+//exercicio 11./
+const salarioBruto = 3000;
+let salarioLiquido;
+let salarioDescInss;
+
+if (salarioBruto<1556.94){
+    salarioDescInss = salarioBruto * 0.92;
+    console.log('salario desc inss é de: ' + salarioDescInss);
+}
+else if (salarioBruto<2594.92){
+    salarioDescInss = salarioBruto * 0.91;
+    console.log('salario desc inss é de: ' + salarioDescInss);
+}
+else if (salarioBruto<5189.82){
+    salarioDescInss = salarioBruto * 0.89;
+    console.log('salario desc inss é de: ' + salarioDescInss);
+}
+else { salarioDescInss = salarioBruto - 570.88;
+    console.log('salario desc inss é de: ' + salarioDescInss);}
+
+if (salarioDescInss < 1903.98) {
+    salarioLiquido = salarioDescInss 
+    console.log('O salário líquido é de: ' + salarioLiquido);
+}
+else if (salarioDescInss < 2826.65) {
+    salarioLiquido = salarioDescInss  - (salarioDescInss*0.075-142.8);
+    console.log('O salário líquido é de: ' + salarioLiquido);
+}
+else if (salarioDescInss < 3751.05) {
+    salarioLiquido = salarioDescInss  - (salarioDescInss*0.15-354.8);
+    console.log('O salário líquido é de: ' + salarioLiquido);
+}
+
+else if (salarioDescInss < 4664.68) {
+    salarioLiquido = salarioDescInss - (salarioDescInss*0.225-636.13);
+    console.log('O salário líquido é de: ' + salarioLiquido);
+}
+else {
+    salarioLiquido = salarioDescInss - (salarioDescInss*0.275-869.36);
+    console.log('O salário líquido é de: ' + salarioLiquido);
+}
