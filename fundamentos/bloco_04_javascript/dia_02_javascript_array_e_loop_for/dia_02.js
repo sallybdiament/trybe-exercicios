@@ -53,3 +53,37 @@ for (let numero of numeros){
  for (let mostraNames of names) {
  console.log(mostraNames);
 }
+console.log('Exercicios:');
+
+// Exercícios 4.2 - exercício 1./
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+for (index2=0; index2<numbers.length; index2 +=1){
+    console.log( numbers[index2]);
+}
+// Exercício 2./
+let somaNumbers = 0;
+for (index3=0; index3<numbers.length; index3 +=1){
+    somaNumbers=somaNumbers+numbers[index3];
+} 
+console.log('Esta é a soma dos valores do Array: '+ somaNumbers);
+
+//Exercício 3./
+let mediaNumbers = somaNumbers / numbers.length;
+console.log('A média dos número é: ' + mediaNumbers);
+
+//Exercício 4./ 
+if (mediaNumbers>20){
+    console.log('O valor final é maior que 20');
+}
+else {console.log('O valor final é menor ou igual a 20');}
+
+//Exercício 5./
+let maiorValor = 0;
+for (index2=0; index2<numbers.length; index2 +=1){
+    if (numbers[index2]>maiorValor){
+        maiorValor=numbers[index2];
+    }
+}
+console.log('O maior valor é: '+ maiorValor);
+
+//Exercício 6./
