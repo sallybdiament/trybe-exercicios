@@ -22,3 +22,19 @@ console.log(menuServices);
 console.log(menu.indexOf('Portfólio'));
 menu.push('contato');
 console.log(menu);
+
+//para fixar: For/
+let cars = ['Saab', 'Volvo', 'BMW'];
+console.log(cars[0]); // Saab
+console.log(cars[1]); // Volvo
+console.log(cars[2]); // BMW
+
+for (let index=0; index<cars.length; index +=1){
+    console.log(cars[index]);
+}
+
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+for (let index1=0; index1<groceryList.length; index1 +=1){
+    console.log(groceryList[index1]);
+}
+
