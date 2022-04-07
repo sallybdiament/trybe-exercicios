@@ -76,3 +76,47 @@ switch (nomeDaPeça.toLowerCase()) {
     default:
         console.log("não conheço essa peça");
 }
+
+//exercicio 7./
+let notaEmPorcetagem;
+notaEmPorcetagem = 95
+if (notaEmPorcetagem>100){
+    console.log('Erro');
+}
+else if (notaEmPorcetagem<0){
+    console.log('Erro');
+}
+else if (notaEmPorcetagem<50){
+    console.log('F');
+}
+else if (notaEmPorcetagem<60){
+    console.log('E');
+}
+else if (notaEmPorcetagem<70){
+    console.log('D');
+}
+else if (notaEmPorcetagem<80){
+    console.log('C');
+}
+else if (notaEmPorcetagem<90){
+    console.log('B');
+}
+else {console.log('A');}
+
+//exericio 8./
+const num1 = 9;
+const num2 = 7;
+const num3 = 5;
+
+if (num1/2!==0 && num2/2!==0 && num3/2!==0){
+    console.log('false');}
+    else {console.log('true');}
+
+//exercicio 9./
+const num4 = 9;
+const num5 = 7;
+const num6 = 5;
+
+if (num4/2===0 && num5/2===0 && num6/2===0){
+    console.log('false');}
+    else {console.log('true');}
