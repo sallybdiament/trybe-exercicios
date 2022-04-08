@@ -13,4 +13,12 @@ for (let indexNumero = 1; indexNumero <= 10; indexNumero += 1) {
 console.log(numero);
 console.log(fatorial);
 
+// exercicio 2./
+let word = 'trybe';
+let backwardWord = '';
+
+for (let indexWord = word.length-1 ; indexWord>=0; indexWord -=1){
+backwardWord += word[indexWord]
+}
+console.log(backwardWord);
 
