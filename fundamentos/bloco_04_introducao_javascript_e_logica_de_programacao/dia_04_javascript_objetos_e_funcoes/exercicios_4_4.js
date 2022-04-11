@@ -37,3 +37,61 @@ let names = {
   for (let key2 in car){
       console.log(key2, car[key2]);
   }
+
+  // para fixar do funções/
+  // Refatorar os exercícios 1 a 5 do dia 4.1/
+  //exercicio 1./
+
+  function sum(a, b) {
+    return a+b;
+  }
+
+  function sub(a, b){
+    return a-b;
+  }
+  function mult(a, b){
+    return a*b;
+  }
+  function div(a, b){
+    return a/b;
+  }
+  function mod(a, b){
+    return a%b;
+  }
+//exercicio 2./
+function biggestNumber (a, b){
+  if (a>b){return a+' é maior que ' +b;}
+  return b + ' é maior que ' + a;
+}
+
+//exercicio 3./
+function biggestNumberOfThree (a, b, c){
+  if (a>b && a>c){ return a;}
+  else if (b>a && b>c) {return b;}
+  return c;
+}
+
+//exercicio 4./
+function positiveOrNegative (a){
+  if (a>0){ return 'o valor é positivo';}
+  else if (a<0) {return 'o valor é negativo'};
+  return 'o valor é zero';
+}
+
+//exercicio 5./
+function triangle (lado1, lado2, lado3){
+  let somaLados = lado1 + lado2 + lado3;
+  let angulosPositivos = lado1 > 0 && lado2 > 0 && lado3 > 0;
+  
+  if (angulosPositivos) {
+      if (somaLados === 180) {
+          return true;
+      }
+      else {
+        return false;
+      }
+  }
+  else { return "erro: angulo invalido"; }
+  
+}
+
