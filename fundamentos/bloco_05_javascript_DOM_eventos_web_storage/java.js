@@ -4,12 +4,12 @@ document.getElementById("page-title").innerText = "Página da Sally: Cinderela �
 document.getElementById("second-paragraph").innerText = "Treinando a função getElementById";
 document.getElementById("subtitle").innerText = "Hoje a aula é sobre Dom e seletores de elementos."
 
-let useClasse = document.getElementsByClassName("classe");
+let useClasse = document.querySelectorAll(".classe");
 for (let i = 0 ; i < useClasse.length ; i += 1) {
     useClasse[i].innerText = "Mudando classe";
 }
 useClasse[1].style.color = 'green';
 useClasse[0].style.fontSize = '1.5rem';
 
-let subtitulo = document.getElementsByTagName("h4");
-subtitulo[0].style.color = 'green';
+let subtitulo = document.querySelectorAll("h4");
+subtitulo[0].style.color = 'blue';
