@@ -34,3 +34,13 @@ primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
 const terceiroFilho3 = filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
 console.log(terceiroFilho3);
 
+for (let i = pai.childNodes.length - 1; i >= 0; i -=1) {
+let currentChildren = pai.childNodes[i];
+if (currentChildren.id !== 'elementoOndeVoceEsta') {
+    currentChildren.remove();
+}
+}
+
+let segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+segundoEUltimoFilhoDoFilho.remove();
+
