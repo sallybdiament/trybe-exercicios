@@ -13,16 +13,53 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+//Usei a "classList.remove('tech');"".
+firstLi.classList.remove('tech');
+let botaoFirstLi = firstLi;
+let botaoSecondLi = secondLi;
+let botaoThirdLi = thirdLi;
+
+window.onload = function () {
+  botaoFirstLi.addEventListener('click', function(){
+    firstLi.classList.add('tech');
+    secondLi.classList.remove('tech');
+    thirdLi.classList.remove('tech');
+} );
+botaoSecondLi.addEventListener('click', function(){
+  secondLi.classList.add('tech');
+  firstLi.classList.remove('tech');
+  thirdLi.classList.remove('tech');
+} );
+botaoThirdLi.addEventListener('click', function(){
+  thirdLi.classList.add('tech');
+  secondLi.classList.remove('tech');
+  firstLi.classList.remove('tech');
+} );
+}
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+input.addEventListener('input', function(){
+let ondeEstaTech = document.querySelector('.tech');
+ondeEstaTech.innerText = event.target.value;
+
+})
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
 
+let botaoMeutop3 = document.getElementById("my-spotrybefy");
+botaoMeutop3.addEventListener('dblclick', function () {
+  window.location.assign('https://sallybdiament.github.io');
+})
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+botaoMeutop3.addEventListener('mouseover', function(){
+document.getElementById('my-spotrybefy').style.color = 'red';
+})
 
 // Segue abaixo um exemplo do uso de event.target:
 
