@@ -16,14 +16,13 @@ function createDaysOfTheWeek() {
   // Escreva seu código abaixo//
 
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  let listaDia = document.createElement('li');
 
   function insertDays() {
     
     let daysNumbers = document.getElementById('days');
-
       for (let i = 0; i < dezDaysList.length; i += 1){
           let numeroDia = dezDaysList[i];
-          let listaDia = document.createElement('li');
           listaDia.innerHTML = numeroDia;
           listaDia.className = 'day';
           daysNumbers.appendChild(listaDia);
@@ -31,14 +30,14 @@ function createDaysOfTheWeek() {
   }
   insertDays();
 
-function incluindoClasseFeriado (){
-    const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-    for (let i = 0; i < dezDaysList.length; i += 1){
-        if (dezDaysList[i] == 24 || dezDaysList[i] == 25 || dezDaysList[i] ==31){
-        listaDia = dezDaysList[i];
-        listaDia.className += 'holiday';
-        console.log(listaDia);
-        }
-  }
-}
-incluindoClasseFeriado();
+// function incluindoClasseFeriado (){
+//     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+//     for (let i = 0; i < dezDaysList.length; i += 1){
+//         if (dezDaysList[i] === 24 || dezDaysList[i] === 25 || dezDaysList[i] === 31){
+//         listaDia = dezDaysList[i];
+//         listaDia.className += 'holiday';
+//         console.log(listaDia);
+//         }
+//   }
+// }
+// incluindoClasseFeriado();
