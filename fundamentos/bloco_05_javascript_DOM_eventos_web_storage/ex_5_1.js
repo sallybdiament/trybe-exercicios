@@ -30,8 +30,17 @@ todosParagrafos.innerText = todosParagrafos.innerText.toUpperCase();
 maiusculo();
 
 function mostrarP() {
-    let parag = document.getElementsByTagName("p");
+    
     for (let i = 0 ; i < parag.length ; i += 1);
+    let parag = document.getElementsByTagName("p")[i]; //se eu coloco isso antes, ele diz erro "document is not defined" e se eu coloco aqui, ele nao le o length pq a variável nao existe antes.
     console.log(parag[i].innerHTML);
 }
 mostrarP();
+
+// function showParagraphs() {
+//     let paragraphs = document.getElementsByTagName('p');
+//     for (let index = 0; index < paragraphs.length; index += 1) {
+//       console.log(paragraphs[index].innerHTML);
+//     }
+//   }
+//   showParagraphs();
