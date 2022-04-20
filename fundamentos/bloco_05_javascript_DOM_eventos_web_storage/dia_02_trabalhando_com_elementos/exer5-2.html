@@ -99,17 +99,15 @@
     novaSection.appendChild(filhoNovaSection);
 
 //     //Exer 8/
- // let listaNaoOrdenada = document.createElement('ul');
-    // listaNaoOrdenada.innerText = itensLista; 
-    // novaSection2.appendChild(listaNaoOrdenada);
+ let listaNaoOrdenada = document.createElement('ul');
+    novaSection2.appendChild(listaNaoOrdenada);
 
-    // let valoresDaLista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    // fot (let i = 0 ; i < valoresDaLista.length ; i +=1) {
-    //     let itensLista = document.createElement('li');
-    //     itensLista.innerHTML = valoresDaLista[i];
-    //     listaNaoOrdenada.appendChild(itensLista);
-    // }
-
+    let valoresDaLista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for (let i = 0 ; i < valoresDaLista.length ; i +=1) {
+        let itensLista = document.createElement('li');
+        itensLista.innerHTML = valoresDaLista[i];
+        listaNaoOrdenada.appendChild(itensLista);
+    }
 
 //     //Exer 9/
 let tagH3Um = document.createElement('h3');
@@ -122,6 +120,27 @@ nomeMain.appendChild(tagH3Um);
 nomeMain.appendChild(tagH3Dois);
 nomeMain.appendChild(tagH3Tres);
 
+//exer 1//
+newh1.classList.add('title');
+
+//exer 2//
+tagH3Um.classList.add('description');
+tagH3Dois.classList.add('description');
+tagH3Tres.classList.add('description');
+
+//Exer 3//
+// nomeMain.removeChild(novaSection);
+
+//Exer 4//
+// novaSection2.style.marginRight = 'auto';
+
+//Exer 5//
+nomeMain.style.background = 'green';
+
+//Exer 6//
+// listaNaoOrdenada.removeChild(itensLista[8]);
+// listaNaoOrdenada.removeChild(itensLista[9]);
     </script>
   </body>
 </html>
+
