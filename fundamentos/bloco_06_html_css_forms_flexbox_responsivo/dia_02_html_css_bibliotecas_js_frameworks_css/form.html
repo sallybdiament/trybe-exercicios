@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 6.1</title>
+    
+</head>
+<body>
+   <header>
+    <h1>TrybeTrip</h1>   
+    </header>
+    <main>
+<form action="" method="get" enctype="multipart/form-data">
+<fieldset>
+<div class="text-input">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" maxlength="40" minlength="10">
+</div>
+<div class="text-input">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" maxlength="50" minlength="10">
+</div>
+<div class="input-radio">
+    <legend>Destino preferido:</legend>
+    <input type="radio" name="destPreferido" value="Cidade" id="destino1">
+    <label for="destino1">Cidade</label>
+    <input type="radio" name="destPreferido" value="Campo" id="destino2">
+    <label for="destino2">Campo</label>
+    <input type="radio" name="destPreferido" value="Praia" id="destino3">
+    <label for="destino3">Praia</label>
+    <input type="radio" name="destPreferido" value="Montanha" id="destino4">
+    <label for="destino4">Montanha</label>
+</div>
+<div class="text-input">
+<label for="text-area">Por que você deveria ser a pessoa dev da Trybe a ganhar o concurso TrybeTrip?</label>
+<textarea name="text-area" id="text-area" maxlength="50" cols="100" rows="10"></textarea>
+</div>
+<div class="text-input">
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data">
+</div>
+<div class="input-radio">
+    <input type="checkbox" id="concordo1" name="concordo1">
+    <label for="concordo1">Gostaria de receber outras oportunidades?</label>
+</div>
+<div class="input-radio">
+    <input type="checkbox" id="concordo2" name="concordo2">
+    <label for="concordo2">Concordo que minhas imagens serão usadas?</label>
+</div>
+<div class="button">
+<button id="botao">Enviar</button>
+</div>
+</fieldset>
+</form>
+    </main>
+    <script src="form.js"></script>
+</body>
+</html>
