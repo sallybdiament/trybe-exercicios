@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(236, 230, 230);
+    border: 1px solid grey ;
+    border-radius: 5px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 50px;
+}
+
+fieldset {
+    margin: 40px auto;
+    width: 80%;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.text-input {
+    padding: 10px;
+}
+
+.text-input input {
+width: 80%;
+padding: 7px;
+font-size: 25px;
+border-radius: 10px;
+}
+
+.input-radio {
+    padding: 20px;
+    line-height: 50px;
+}
+
+#text-area {
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+}
