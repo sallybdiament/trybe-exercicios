@@ -1,0 +1,73 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+  /* font-size: 150%; */
+  margin: 20px 20px;
+  }
+  
+  article {
+  width: 100%;
+  }
+  
+  h1 {
+  font-size: 80%;
+  }
+  
+  h2 {
+  
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  
+  main {
+  
+  }
+  
+  section {
+  
+  }
+  
+  figure {
+      margin: 50px 20px;
+  }
+  
+  figcaption {
+    font-size: .8em;
+  }
+
+  @media screen and (max-width: 600px) {
+      body {
+          background-color: blue;
+          font-size: 120%;
+          margin: 50px 50px;
+      }
+      
+      section {
+          display: flex;
+      }
+  }
+
+  @media screen and (min-width: 1000px) {
+    body {
+        background-color: blue;
+        font-size: 120%;
+        margin: 50px 50px;
+        max-width: 1000px;
+    }
+    
+    section {
+        display: flex;
+    }
+}
