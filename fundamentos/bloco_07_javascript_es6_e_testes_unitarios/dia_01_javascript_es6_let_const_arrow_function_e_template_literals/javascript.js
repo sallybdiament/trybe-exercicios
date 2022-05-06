@@ -24,3 +24,42 @@ oddsAndEvens.sort( (a, b) => a - b);
 }
 
   retorneOrdenado(oddsAndEvens);
+
+  // Parte II - Exercício 1://
+const fatorial = (n) => {
+let resultFatorial = 1;
+for (let index = 2; index <= n; index += 1) {
+    resultFatorial *= index;
+}
+return resultFatorial;
+}
+
+console.log(fatorial(6));
+
+//Bonus: fatorial com ternary operator://
+const fatorialBonus = (num) => num > 0 ? num * fatorialBonus(num-1) : 1;
+console.log(fatorialBonus(6));
+
+// Parte II - Exercício 2://
+const longestWord = (frase) => {
+let arrayPalavras = frase.split(' ');
+let maiorPalavra = 0;
+let resultado = '';
+for (let palavra of arrayPalavras) {
+    if (palavra.lenght > maiorPalavra) {
+        maiorPalavra = palavra.lenght;
+resultado = palavra;
+    }
+}
+return resultado;
+}
+
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+
+// Parte II - Exercício 3://
+
+const botao = document.getElementById('botao');
+const pContagemCliques = document.getElementById('contagemCliques');
+let contClique = 0;
+
+botao.addEventListener('click', () => pContagemCliques.innerHTML = contClique +=1);
