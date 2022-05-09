@@ -63,3 +63,28 @@ const pContagemCliques = document.getElementById('contagemCliques');
 let contClique = 0;
 
 botao.addEventListener('click', () => pContagemCliques.innerHTML = contClique +=1);
+
+// Parte II - Exercício 4://
+let stringDeterminada = 'Tryber x aqui';
+let parametro = '';
+console.log(stringDeterminada.length);
+
+function trocaX (parametro) {
+  for (let i = 0; i < stringDeterminada.length; i += 1) {
+    if (stringDeterminada[i] === 'x') {
+      // stringDeterminada[i] = 'sally';
+      console.log(`Tryber ${parametro} aqui!
+Minhas cinco principais habilidades:`);
+    }
+  }
+}
+parametro = 'sally';
+trocaX (parametro);
+
+const arraySkills = ['Js', 'HTML', 'CSS', 'Python', 'bootstrap'];
+const arraySkillsOrdemAlf = (arraySkills.sort());
+
+
+for (let index = 0; index < arraySkillsOrdemAlf.length; index += 1) {
+console.log(arraySkillsOrdemAlf[index]);
+}
