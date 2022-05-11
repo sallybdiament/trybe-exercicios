@@ -72,7 +72,8 @@ botao.addEventListener('click', () => pContagemCliques.innerHTML = contClique +=
 function trocaX (frase, parametroString) {
   for (let i = 0; i < frase.length; i += 1) {
     if (frase[i] === 'x') {
-      return frase[i] = parametroString;
+    return frase[i] = parametroString;
+  
     }
     // console.log(frase[i]);
   }
