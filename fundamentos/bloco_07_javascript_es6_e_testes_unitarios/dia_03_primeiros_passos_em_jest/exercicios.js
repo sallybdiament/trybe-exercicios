@@ -24,6 +24,47 @@ function sum(a, b) {
     return num;
   }
 
+  function encode(frase) {
+    let vogaisCode = {
+      a: 1,
+      e: 2,
+      i: 3,
+      o: 4,
+      u: 5,
+    };
+    let encodeFrase = '';
+    for (let i = 0; i < frase.length; i += 1) {
+      let temVogal = vogaisCode[frase[i]];
+      if (typeof (temVogal) === 'number') {
+        encodeFrase += temVogal;
+      } else { encodeFrase += frase[i]; }
+    }
+    return encodeFrase;
+  }
+  
+  console.log(encode("hi there!"));
+  
+  function decode(fraseComNumeros) {
+    let vogaisUncode = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+    };
+    let decodeFraseComNumeros = '';
+    for (let i = 0; i < fraseComNumeros.length; i += 1) {
+      if (fraseComNumeros[i] <= 5 && fraseComNumeros[i] >= 1) {
+        decodeFraseComNumeros += vogaisUncode[fraseComNumeros[i]];
+      } else { decodeFraseComNumeros += fraseComNumeros[i]; }
+    }
+    return decodeFraseComNumeros;
+  }
+  
+  console.log(decode('h3 th2r2!'));
+
   module.exports = sum;
   module.exports = myRemove;
   module.exports = myFizzBuzz;
+  module.exports = decode;
+  module.exports = encode;

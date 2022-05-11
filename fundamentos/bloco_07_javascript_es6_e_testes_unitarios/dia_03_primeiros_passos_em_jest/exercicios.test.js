@@ -30,22 +30,50 @@
 
 // })
 
-const myFizzBuzz = require('./exercicios');
+// const myFizzBuzz = require('./exercicios');
 
-describe ('Testes para exercício 3 da função myFizzBuzz', () => {
-test ('Retorna fizzbuzz para 15', () => {
-    expect(myFizzBuzz(15)).toBe('fizzbuzz');
-})
-test ('Retorna fizz para 9', () => {
-    expect(myFizzBuzz(9)).toBe('fizz');
-})
-test ('Retorna buzz para 5', () => {
-    expect(myFizzBuzz(5)).toBe('buzz');
-})
-test ('Retorna 7 para 7', () => {
-    expect(myFizzBuzz(7)).toBe(7);
-})
-test ('Retorna false para "a"', () => {
-    expect(myFizzBuzz('a')).toBeFalsy();
-})
-})
+// describe ('Testes para exercício 3 da função myFizzBuzz', () => {
+// test ('Retorna fizzbuzz para 15', () => {
+//     expect(myFizzBuzz(15)).toBe('fizzbuzz');
+// })
+// test ('Retorna fizz para 9', () => {
+//     expect(myFizzBuzz(9)).toBe('fizz');
+// })
+// test ('Retorna buzz para 5', () => {
+//     expect(myFizzBuzz(5)).toBe('buzz');
+// })
+// test ('Retorna 7 para 7', () => {
+//     expect(myFizzBuzz(7)).toBe(7);
+// })
+// test ('Retorna false para "a"', () => {
+//     expect(myFizzBuzz('a')).toBeFalsy();
+// })
+// })
+
+const encode = require('./exercicios');
+
+describe ('Teste função encode', () => {
+    test ('Espera-se que encode exista com função', () => {
+        expect(typeof encode).toBe('function');
+        })
+    test ('Espera-se que "aeiou" se torne "12345"', () => {
+        expect(encode('aeiou')).toMatch('12345');
+    })
+    test ('Espera-se que bcd não mude', () => {
+        expect(encode('bcd')).toMatch('bcd');
+    })
+    })
+
+//     const decode = require('./exercicios');
+
+// describe ('Teste função decode', () => {
+//     test ('Espera-se que decode exista com função', () => {
+//         expect(typeof decode).toBe('function');
+//         })
+//     test ('Espera-se que "12345" se torne "aeiou"', () => {
+//         expect(decode('12345')).toMatch('aeiou');
+//     })
+//     test ('Espera-se que bcd não mude', () => {
+//         expect(encode('bcd')).toMatch('bcd');
+//     })
+//     })
