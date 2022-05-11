@@ -63,8 +63,15 @@ function sum(a, b) {
   
   console.log(decode('h3 th2r2!'));
 
-  module.exports = sum;
-  module.exports = myRemove;
-  module.exports = myFizzBuzz;
-  module.exports = decode;
-  module.exports = encode;
+  function techList (array, string) {
+    if (array.length === 0) return 'Vazio!';
+    const arrayOrdenado = array.sort();
+    const listaTecs = [];
+    for (let i = 0; i < arrayOrdenado.length; i += 1){
+      listaTecs.push({tech: arrayOrdenado[i], name: string,
+      });
+    }
+return listaTecs; 
+        };
+
+  module.exports = {sum, myRemove, myFizzBuzz, decode, encode, techList};
