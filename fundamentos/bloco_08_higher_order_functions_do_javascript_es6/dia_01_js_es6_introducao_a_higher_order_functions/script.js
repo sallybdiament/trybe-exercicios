@@ -43,3 +43,28 @@ const resultadoLoteria = (numApostado, callback) => {
 };
 
 console.log(resultadoLoteria(2, checaResultado));
+
+//Exercicio 3://
+const checaRespostas = (gabarito, respEstudantes) => {
+    if (respEstudantes === 'N.A') {
+        return 0;
+    } if (gabarito === respEstudantes) {
+       return 1;
+    } return 0.5;
+}
+
+const contarPontos = (gabarito, respEstudantes, callback) => {
+    let totalPontos = 0;
+    for (let i = 0; i < gabarito.length; i +=1) {
+        const callbackReturn = callback(gabarito[i], respEstudantes[i]);
+        totalPontos += callbackReturn;
+    }
+    return `Resultado final é ${totalPontos} pontos.`
+}
+
+const gabarito = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const respEstudantes = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const result = contarPontos(gabarito, respEstudantes, checaRespostas);
+console.log(result);
+
