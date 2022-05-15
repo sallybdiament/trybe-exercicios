@@ -60,7 +60,70 @@ const musicas = [
   ]
   
   function findMusic(id) {
-    // Adicione seu código aqui
+      return musicas.find((objeto) => objeto.id === id);
+    }
+
+  console.log(findMusic('31031685'))
+
+  // Para fixar array.some://
+  const listNames = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
+
+const verifyFirstLetter = (letter, names) => names.some((name) => name[0] === letter);
+
+console.log(verifyFirstLetter('J', listNames)); // true
+console.log(verifyFirstLetter('x', listNames)); // false
+
+const grades = {
+    portugues: 'Aprovado',
+    matematica: 'Reprovado',
+    ingles: 'Aprovado',
+  };
+  
+  const verifyGrades = (studentGrades) => (
+    Object.values(studentGrades).every((grade) => grade === 'Aprovado')
+  );
+  
+  console.log(verifyGrades(grades));
+
+  // Para fixar array.some 1://
+  const names3 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+ return arr.some((nome) => nome === name);
+}
+
+console.log(hasName(names3, 'Ana'));
+
+ // Para fixar array.some 2://
+ const people = [
+    { name: 'Mateus', age: 18 },
+    { name: 'José', age: 16 },
+    { name: 'Ana', age: 23 },
+    { name: 'Cláudia', age: 20 },
+    { name: 'Bruna', age: 19 },
+  ];
+  
+  const verifyAges = (arr, minimumAge) => {
+    return arr.every((pessoa) => pessoa.age >= minimumAge);
   }
   
-  console.log(findMusic('31031685'))
+  console.log(verifyAges(people, 15));
+
+  // Para fixar array.sort 1://
+  const people2 = [
+    { name: 'Mateus', age: 18 },
+    { name: 'José', age: 16 },
+    { name: 'Ana', age: 23 },
+    { name: 'Cláudia', age: 20 },
+    { name: 'Bruna', age: 19 },
+  ];
+  
+  people2.sort((personA, personB) => personA.age - personB.age);
+  
+  console.log(people2);
+
+  //Para fixar array.sort 2://
+  people2.sort((personA, personB) => personB.age - personA.age);
+  
+  console.log(people2);
+
