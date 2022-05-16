@@ -127,3 +127,8 @@ console.log(hasName(names3, 'Ana'));
   
   console.log(people2);
 
+  people2.sort(function(a,b) {
+    return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+});
+  
+  console.log(people2);
