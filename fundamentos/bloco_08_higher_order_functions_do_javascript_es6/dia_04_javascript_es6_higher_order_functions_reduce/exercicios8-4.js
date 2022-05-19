@@ -116,12 +116,15 @@ console.log(averageAge2());
 function longestNamedBook() {
     return books.reduce((acc, book) => {
         if (book.name.length > acc.name.length) {
-          return  book
-        } else {return acc}
-    }, 0)
+          return  book;
+        }
+         return acc;
+    });
   }
-
-//   console.log(longestNamedBook());
+const resultado = longestNamedBook();
+console.log(`Exercício 4: ${longestNamedBook()}`);
+console.log(`Exercício 4: ${resultado}`);
+  console.log(`Exercício 4:`, resultado);
 
   function longestNamedBook2() {
     return books.reduce((biggestBook, currentBook) => {
@@ -131,7 +134,6 @@ function longestNamedBook() {
       return biggestBook;
     });
   }
-
   console.log(longestNamedBook2());
 
   //Exercicio 5://
@@ -140,17 +142,17 @@ function longestNamedBook() {
     'Abegildo', 'Adicellia', 'Aladonata',
     'Abeladerco', 'Adieidy', 'Alarucha',
   ];
-  let soma = 0;
-  function containsA() {
-   return names.map((palavra) => {
- for (let letra of palavra) {
-    if (letra === 'a' || letra === 'A') {
-      return  soma = soma+1;
-    } return soma;
- }
-    })
-  }
-console.log(containsA());
+//   let soma = 0;
+//   function containsA() {
+//    return names.map((palavra) => {
+//  for (let letra of palavra) {
+//     if (letra === 'a' || letra === 'A') {
+//       return  soma = soma + 1 ;
+//     } return soma;
+//  }
+//     })
+//   }
+// console.log(containsA());
 ;
 function containsA2() {
     return names.reduce((acc, curr) =>
@@ -159,3 +161,19 @@ function containsA2() {
           return acumulator;
        }, 0), 0);
   }
+
+  //Exercício 6://
+  const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
+
+const media = (grade) => {
+    const somaNotas = grade.reduce((acc, note) => acc+note, 0);
+     return Number(somaNotas/grade.length).toFixed(1);
+    // return Math.round(somaNotas/grade.length);
+};
+
+function studentAverage() {
+ return students.map((student, index) => ({name: student, average: media(grades[index])}));
+}
+
+console.log(studentAverage());
