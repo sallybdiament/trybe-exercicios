@@ -93,25 +93,7 @@ const person = {
   const { nationality } = person;
   console.log(nationality);
 
-//   const getNationality = ({ firstName, nationality = 'Brazilian }) => `${firstName} is ${nationality}`;
-
-// const person2 = {
-//   firstName: 'João',
-//   lastName: 'Jr II',
-// };
-
-// const otherPerson = {
-//   firstName: 'Ivan',
-//   lastName: 'Ivanovich',
-//   nationality: 'Russian',
-// };
-
-// const {firstName, lastName, nationality2 = 'Brazilain'} = person2;
-
-// console.log(getNationality(otherPerson)); // Ivan is Russian
-// console.log(getNationality(person2));
-
-const getNationality = ({ firstName, nationality = "Brazilian" }) => `${firstName} is ${nationality}`;
+  const getNationality = ({ firstName, nationality = 'Brazilian' }) => `${firstName} is ${nationality}`;
 
 const person2 = {
   firstName: 'João',
@@ -124,5 +106,45 @@ const otherPerson = {
   nationality: 'Russian',
 };
 
+const {firstName, lastName, nationality2 = 'Brazilain'} = person2;
+
 console.log(getNationality(otherPerson)); // Ivan is Russian
-console.log(getNationality(person2)); // João is Brazilian
+console.log(getNationality(person2));
+
+//Exercicio 4://
+const people = [
+  {
+    name: 'Nicole',
+    bornIn: 1992,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Harry',
+    bornIn: 2008,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Toby',
+    bornIn: 1901,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Frida',
+    bornIn: 1960,
+    nationality: 'Dannish',
+  },
+  {
+    name: 'Fernando',
+    bornIn: 2001,
+    nationality: 'Brazilian',
+  },
+];
+
+const {bornIn, name} = people;
+
+const filterPeople = ({bornIn, name}) => {
+if (1901 < bornIn< 2000) {
+  return name;
+}
+}
+console.log(filterPeople());
