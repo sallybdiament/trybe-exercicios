@@ -1,7 +1,7 @@
 import React from 'react';
 
 function handleClick() {
-  console.log('Clicou no botão!')
+  console.log('Clicou no botão!!')
 }
 
 const handleClick2 = () =>(console.log('Botão 2 foi clicado'));
