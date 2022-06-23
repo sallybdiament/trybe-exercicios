@@ -21,13 +21,36 @@ class ParaFixar2 extends React.Component {
             botaoTres: estadoAnterior.botaoTres + 1,
         }))
     }
+    // Para essa função, não precisamos utilizar o bind porque ela é utilizada
+    // apenas dentro do contexto do componente App
+    getButtonColor(num) {
+        // Essa função contém um ternário que realiza a lógica para mudarmos
+        // a cor do botão para verde quando for um número par
+        return num % 2 === 0 ? 'green' : 'white';
+      }
     render () {
+        const { botaoUm, botaoDois, botaoTres } = this.state;
     return (
       <div>
         <p>Para Fixar 2:</p>
-        <button onClick={this.handleBotaoUm}>{this.state.botaoUm}</button>
-        <button onClick={this.handleBotaoDois}>{this.state.botaoDois}</button>
-        <button onClick={this.handleBotaoTres}>{this.state.botaoTres}</button>
+        <button
+        onClick={this.handleBotaoUm}
+        style={{backgroundColor: this.getButtonColor(botaoUm)}}
+        >
+            {this.state.botaoUm}
+        </button>
+        <button
+        onClick={this.handleBotaoDois}
+        style={{backgroundColor: this.getButtonColor(botaoDois)}}
+        >
+            {this.state.botaoDois}
+            </button>
+        <button
+        onClick={this.handleBotaoTres}
+        style={{backgroundColor: this.getButtonColor(botaoTres)}}
+        >
+            {this.state.botaoTres}
+            </button>
       </div>
     )
   }
