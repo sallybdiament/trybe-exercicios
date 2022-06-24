@@ -1,5 +1,7 @@
-import Form from './Components/PersonalForm';
+import PersonalForm from './Components/PersonalForm';
 import './CSS/App.css';
+import ProfessionalForm from './Components/ProfessionalForm';
+import Form from './Components/Form';
 
 function App() {
   return (
