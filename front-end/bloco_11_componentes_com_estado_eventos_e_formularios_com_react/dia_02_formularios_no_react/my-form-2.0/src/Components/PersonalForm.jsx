@@ -11,7 +11,6 @@ class PersonalForm extends React.Component{
       const { state: {nome, endereco, cidade}} = this.props
       return (
           <div className="form">
-            <form> 
             <fieldset className="form">
               <legend>Dados Pessoais</legend>
               <label htmlFor="nome">
@@ -109,7 +108,7 @@ class PersonalForm extends React.Component{
                    />
                 </label>
             </fieldset>
-            </form>
+        
           </div>
         )
     }

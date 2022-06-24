@@ -5,7 +5,6 @@ class ProfessionalForm extends React.Component {
     const {onHandleChange} = this.props;
     return (
       <div>
-        <form>
           <fieldset>
             <legend>Professional info</legend>
             <label htmlFor="resumoCV">
@@ -44,7 +43,6 @@ class ProfessionalForm extends React.Component {
                 /> 
               </label>
           </fieldset>
-        </form>
       </div>
     );
   }

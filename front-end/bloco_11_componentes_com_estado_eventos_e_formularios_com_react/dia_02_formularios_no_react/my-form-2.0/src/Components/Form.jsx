@@ -1,7 +1,7 @@
 import React from 'react';
+import FormDataDisplay from './FormDataDisplay';
 import PersonalForm from './PersonalForm';
 import ProfessionalForm from './ProfessionalForm';
-
 class Form extends React.Component {
     constructor (props){
         super(props);
@@ -16,6 +16,7 @@ class Form extends React.Component {
           resumoCV:'',
           cargo:'',
           descricao:'',
+          submitted: false,
     }
   }
 
@@ -35,9 +36,17 @@ this.setState({ [name]: value})
       if (name === "cidade") value = value.match(/ˆ\d/) ? "" : value;
       this.setState({ [name]: value})
     }
+
+sendForm = (event) => {
+//    para nao apagar os dados já preenchido:
+    event.preventDefault();
+    this.setState({submitted: true})
+}
+
     render () {
         return (
-<form>
+            <div>
+<form onSubmit={this.sendForm}>
     <h1>Cadastro</h1>
     <PersonalForm 
     onHandleChange={this.handleChange}
@@ -47,7 +56,11 @@ this.setState({ [name]: value})
     <ProfessionalForm 
      onHandleChange={this.handleChange}
      onHandleBlur={this.handleBlur}/>
+<input type="submit" value='ENVIAR' />
 </form>
+{ this.state.submitted && (<FormDataDisplay state={this.state} />)
+}
+</div>
         )
     }
 }
