@@ -60,6 +60,7 @@ sendForm = (event) => {
 </form>
 { this.state.submitted && (<FormDataDisplay state={this.state} />)
 }
+<button>Limpar</button>
 </div>
         )
     }
