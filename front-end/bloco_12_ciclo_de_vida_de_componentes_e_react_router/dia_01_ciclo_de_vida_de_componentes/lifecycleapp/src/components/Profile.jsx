@@ -13,7 +13,7 @@ class Profile extends React.Component {
   }
 
   async componentDidMount() {
-    const myUser = ''; //Preencha myUser com o seu user do GitHub.
+    const myUser = 'sallybdiament'; //Preencha myUser com o seu user do GitHub.
     try {
       const url = `https://api.github.com/users/${myUser}`;
       const response = await fetch(url)
