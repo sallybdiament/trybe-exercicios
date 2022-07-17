@@ -22,13 +22,14 @@
       <button id="toggle-status">Ficar Online</button>
     </div>
     <script>
+
       const THEME_INITIAL_STATE = {
         theme: 'dark',
       };
 
       const themeReducer = (state = THEME_INITIAL_STATE, action) => {
         switch (action.type) {
-          case 'changeTheme':
+          case 'TOGGLE_THEME':
             return { 
                 ...state,
                 theme: state.theme === 'dark' ? 'light' : 'dark',
@@ -54,21 +55,23 @@
         }
       };
 
-      const combineReducers = combineReducers({
+      const twoReducers = combineReducers({
         themeReducer,
         statusReducer,
       })
-
-      const store = Redux.createStore(combineReducers);
-
+      
+      const store = Redux.createStore(twoReducers);
+      
       const themeButton = document.getElementById('toggle-theme');
       const statusButton = document.getElementById('toggle-status');
 
       themeButton.addEventListener('click', () => {
-       store.dispatch({ type: 'changeTheme'})
+        // console.log('clicou');
+       store.dispatch({ type: 'TOGGLE_THEME'})
       });
 
       statusButton.addEventListener('click', () => {
+    //    console.log('clicou');
         store.dispatch({ type: 'changeStatus'})
       });
 
