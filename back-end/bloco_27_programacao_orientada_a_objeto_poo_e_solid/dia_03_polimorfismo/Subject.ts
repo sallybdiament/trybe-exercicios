@@ -12,11 +12,3 @@ export default class Subject {
     this._name = value;
   }
 }
-
-const subjectMath = new Subject('Maths');
-const subjectEnglish = new Subject('English');
-const subjectPortuguese = new Subject('Portugues');
-
-console.log('Subject1 created:', subjectMath);
-console.log('Subject created:', subjectEnglish);
-console.log('Subject created:', subjectPortuguese);

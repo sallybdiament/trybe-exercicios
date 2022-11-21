@@ -1,9 +1,10 @@
+import Enrollable from './Enrollable';
 import Person from './Person';
 
-export default class Student extends Person {
-  private _enrollment: string;
+export default class Student extends Person implements Enrollable {
   private _examsGrades: number[];
   private _papersGrades: number[];
+  private _enrollment = String();
   constructor(
     name: string, 
     birthDate: Date,
@@ -58,11 +59,3 @@ export default class Student extends Person {
     return average;
   }
 }
-
-const studentMary = new Student('Mary', new Date('1987/02/18'));
-console.log(studentMary);
-studentMary.examsGrades = [8, 7, 4, 2];
-studentMary.papersGrades = [10, 9];
-console.log('soma das notas:', studentMary.addGrade());
-console.log('media das notas:', studentMary.name, studentMary.averageGrad());
-console.log('numero de matricula é:', studentMary.enrollment);

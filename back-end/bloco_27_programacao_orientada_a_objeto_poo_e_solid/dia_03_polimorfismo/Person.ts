@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-export default class Person {
+export default abstract class Person {
   constructor(private _name: string, private _birthDate: Date) {
     this.name = _name;
     this.birthDate = _birthDate;
@@ -38,6 +38,3 @@ export default class Person {
     }
   }
 }
-
-const pessoaLuanda = new Person('Luanda', new Date('1980/01/25'));
-console.log(pessoaLuanda);
