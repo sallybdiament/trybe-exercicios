@@ -1,19 +1,19 @@
-export default class Date {
+export default class Data {
   private _day: number;
   private _month: number;
   private _year: number;
   constructor(day: number, month: number, year: number) {
     // note que esse método não é chamado a partir do this, e sim a partir do Data
     // isso acontece pois ele é estático, ou seja, não está vinculado a nenhuma instância
-    // if (!Date.validateDate(day, month, year)) {
-    //   this._day = 1;
-    //   this._month = 1;
-    //   this._year = 1900;
-    // } else {
-    this._day = day;
-    this._month = month;
-    this._year = year;
-    // }
+    if (!Data.validateDate(day, month, year)) {
+      this._day = 1;
+      this._month = 1;
+      this._year = 1900;
+    } else {
+      this._day = day;
+      this._month = month;
+      this._year = year;
+    }
   }
 
   get day() { return this._day; }
@@ -48,15 +48,13 @@ export default class Date {
     return this._year % 4 === 0;
   }
 
-  compare(date: Date): number {
-    const cDay = this.day;
-    const cMonth = this.month;
-    const cYear = this.year;
+  compare(date: Data): number {
+    const currentDateStr = `${this.year}-${this.month}-${this.day}`;
 
-    const { day, month, year } = date;
+    const dateStr = `${date.year}-${date.month}-${date.day}`;
 
-    if (new Date(cDay, cMonth, cYear) > new Date(day, month, year)) return 1;
-    if (new Date(cDay, cMonth, cYear) < new Date(day, month, year)) return -1;
+    if (new Date(currentDateStr) > new Date(dateStr)) return 1;
+    if (new Date(currentDateStr) < new Date(dateStr)) return -1;
 
     return 0;
   }
@@ -88,19 +86,19 @@ export default class Date {
 
   // esse método é estático pois ele não precisa acessar o `this` em momento algum
   // logo, não precisa estar vinculado a nenhuma instância
-  // private static validateDate(day: number, month: number, year: number)
-  //   : boolean {
-  //   const day1 = day;
-  //   const month1 = month;
-  //   const year1 = year;
+  private static validateDate(day: number, month: number, year: number)
+    : boolean {
+    const day1 = day;
+    const month1 = month;
+    const year1 = year;
 
-  //   if (new Date(day1, month1, year1).getDate() !== day) return false;
+    if (new Date(day1, month1, year1).getDate() !== day) return false;
 
-  //   return true;
-  // }
+    return true;
+  }
 }
 
-const testDate = new Date(18, 2, 1987);
+const testDate = new Data(18, 2, 1987);
 console.log(testDate);
 console.log('Dia: ', testDate.day);
 console.log('Mês: ', testDate.month);
@@ -114,7 +112,7 @@ console.log(testDate.format('aaaa-mm-dd'));
 console.log(testDate.format('dd de M de aa'));
 console.log(testDate.format('dd, M de aaaa'));
 
-const otherDate = new Date(30, 1, 2021);
+const otherDate = new Data(30, 1, 2021);
 
 const compared = testDate.compare(otherDate);
 
