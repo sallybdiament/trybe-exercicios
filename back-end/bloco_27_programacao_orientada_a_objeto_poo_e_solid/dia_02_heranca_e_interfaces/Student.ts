@@ -1,28 +1,33 @@
-class Student {
-  private _enrollment: number;
-  private _name: string;
+import Person from './Person';
+
+export default class Student extends Person {
+  private _enrollment: string;
   private _examsGrades: number[];
   private _papersGrades: number[];
   constructor(
-    matricula: number, 
     name: string, 
+    birthDate: Date,
   ) {
-    this._enrollment = matricula;
-    this._name = name;
+    super(name, birthDate);
+    this._enrollment = this.generateEnrollment();
     this._examsGrades = [];
     this._papersGrades = [];
   }
 
-  get enrollment(): number { return this._enrollment; }
+  get enrollment(): string { return this._enrollment; }
 
-  set enrollment(value: number) { this._enrollment = value; }
-
-  get name(): string { return this._name; }
-  set name(value: string) { 
-    if (value.length < 3) {
-      throw new Error('Name must have 3 characters or more.'); 
+  set enrollment(value: string) { 
+    if (value.length < 16) { 
+      throw new Error('A matrícula deve possuir pelo menos 16 caracterres');
     }
-    this._name = value;
+    this._enrollment = value; 
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  generateEnrollment(): string {
+    // eslint-disable-next-line max-len
+    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+    return `STU${randomStr}`;
   }
 
   get examsGrades(): number[] { return this._examsGrades; }
@@ -54,9 +59,10 @@ class Student {
   }
 }
 
-const studentMary = new Student(123, 'Mary');
+const studentMary = new Student('Mary', new Date('1987/02/18'));
 console.log(studentMary);
 studentMary.examsGrades = [8, 7, 4, 2];
 studentMary.papersGrades = [10, 9];
 console.log('soma das notas:', studentMary.addGrade());
 console.log('media das notas:', studentMary.name, studentMary.averageGrad());
+console.log('numero de matricula é:', studentMary.enrollment);
