@@ -1,0 +1,7 @@
+use('class');
+// db.createCollection('books');
+db.books.countDocuments({});
+
+db.books.find({"status": "PUBLISHED"}).countDocuments({});
+db.books.find({}, { title: true, isbn: true, pageCount: true, _id: false}).limit(3);
+db.books.find({ status: "MEAP"}, {_id: true, title: true, authors: true, status: true}).skip(5).limit(10);
