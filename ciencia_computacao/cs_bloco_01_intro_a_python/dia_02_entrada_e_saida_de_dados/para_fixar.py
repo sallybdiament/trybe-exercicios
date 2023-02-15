@@ -22,13 +22,14 @@ print(f"A soma dos valores válidos é {soma}.")
 #  Ex 3: Dado um arquivo contendo estudantes e suas respectivas notas, escreva um programa que: lê todas essas informações; aplique um filtro, mantendo somente as pessoas que estão reprovadas; escreva seus nomes em outro arquivo.
 # Considere que a nota miníma para aprovação é 6.
 recuStudents = []
-with open("file.txt") as lista_estudantes:
-    print(lista_estudantes)
+with open("ex3.txt") as lista_estudantes:
+    # print(lista_estudantes)
     for line in lista_estudantes:
         student_grade = line
         student_grade = student_grade.split(" ")
         if int(student_grade[1]) < 6:
             recuStudents.append(student_grade[0] + "\n")
+# print(lista_estudantes.closed)
 
 
 with open("ex3.txt", mode="w") as recuStudentsFile:
